@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" as="fetch" crossorigin="anonymous" href="/AdminPanel/_payload.json">
+<style>.grid[data-v-b2382397]{backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);border-bottom:1px solid rgba(97,97,97,.3);border-radius:16px;box-shadow:0 4px 30px rgba(0,0,0,.1);padding:25px 20px 20px}.flexColoum[data-v-b2382397]{background:#fff;flex-direction:column;justify-content:center;padding:50px}.flex[data-v-b2382397],.flexColoum[data-v-b2382397]{align-items:center;display:flex}.flex[data-v-b2382397]{justify-content:space-evenly}.Ppic[data-v-b2382397]{aspect-ratio:1;border-radius:50%;box-shadow:0 5px 5px #000;width:8rem}.email[data-v-b2382397]{color:gray;margin-top:-30px}.modal div[data-v-b2382397]{text-align:center}.modal .addBtn[data-v-b2382397]{background:green;border:none;border-radius:.5em;color:#fff;cursor:pointer;margin-top:10px;padding-block:5px;padding-inline:30px}.modal .cross[data-v-b2382397]{cursor:pointer;position:absolute;right:5px;top:5px}.modal input[data-v-b2382397]{border:none;border-radius:.2em;margin-top:.3em;outline:none;padding:5px}.modal[data-v-b2382397]{background:#d3d3d3;border-radius:10px;padding:20px;position:absolute}.add[data-v-b2382397]{background:transparent;background:#d3d3d3;border-radius:50%;cursor:pointer;height:22px;margin-left:2rem;padding:5px;width:22px}.container[data-v-b2382397]{margin-inline:auto;margin-top:3.9rem;min-height:76.5vh;width:70%}.cats[data-v-b2382397]{margin-top:3rem}.cats[data-v-b2382397],.catsContainer[data-v-b2382397]{align-items:center;display:flex;justify-content:center}.catsContainer[data-v-b2382397]{Row-gap:10px;flex-wrap:wrap;margin-inline:auto;padding-top:20px;width:80%}.boxInfo[data-v-b2382397]{align-items:center;display:flex;flex-direction:column;justify-content:center}.boxInfo p[data-v-b2382397]{color:gray;font-size:1.5rem;margin-top:.5em}.infoIcons[data-v-b2382397]{height:90px;width:90px}.icon[data-v-b2382397]{height:30px;margin-bottom:15px;width:30px}.info[data-v-b2382397]{display:flex;justify-content:space-evenly;margin-inline:auto;margin-bottom:1.5rem;width:70%}.box[data-v-b2382397],.boxes[data-v-b2382397]{align-items:center;display:flex;justify-content:center}.box[data-v-b2382397]{background:#d3d3d3;border-radius:.5rem;box-shadow:0 10px 12px gray;flex-direction:column;font-weight:700;height:140px;margin:1em;position:relative;transition:transform .2s ease-in-out;width:140px}.box[data-v-b2382397]:hover{cursor:pointer;transform:translateY(-10px)}</style>
+<style>.icon[data-v-9c34c54e]{display:inline-block;vertical-align:middle}</style>
+<style>body::-webkit-scrollbar{width:1em}body::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px gray}body::-webkit-scrollbar-thumb{background-color:#d3d3d3;border-radius:10px;box-shadow:inset 0 0 6px #fff;margin:20px;outline:1px solid #708090}.page-enter-active,.page-leave-active{transition:all .4s}.page-enter-from,.page-leave-to{filter:blur(1rem);opacity:0}</style>
+<style>.container[data-v-13057af5]{align-items:center;display:flex;flex-direction:column;height:100vh;justify-content:center}.textXl[data-v-13057af5]{font-size:4rem}.error[data-v-13057af5]{font-size:1.3rem;margin-top:10px}.goBack[data-v-13057af5]{background:#5586f1;border:none;border-radius:rounded;border-radius:1rem;box-shadow:0 4px 4px 4px #add8e6;color:#fff;cursor:pointer;font-size:1.2rem;margin-top:30px;outline:none;padding-block:15px;padding-inline:30px}</style>
+<link rel="stylesheet" href="/_nuxt/entry.6edf4f7e.css">
+<link rel="stylesheet" href="/_nuxt/navBar.cce607b2.css">
+<link rel="stylesheet" href="/_nuxt/Category.c2502ae5.css">
+<link rel="stylesheet" href="/_nuxt/CustomBtn.b0c4fc6c.css">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/entry.dac6c7c1.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/AdminPanel.362e5c60.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Nav.54df0d50.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/navBar.css.33dbc752.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Icon.deda8fe1.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/config.ea43d4ee.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Category.056d871a.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/CustomBtn.5376788d.js">
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/useAuth.55454f55.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/admin.a8109763.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/authen.b22a988a.js">
+<script type="module" src="/_nuxt/entry.dac6c7c1.js" crossorigin></script></head>
+<body ><div id="__nuxt"><div><div data-v-b2382397><header data-v-b2382397><div class="navbar flex"><p class="logo">E&amp;S BLOG</p><div class="flex rightdev"><ul class="navlist flex"><a href="/" class="navItem">Home</a><a href="/StoryPage" class="navItem">Our History</a><a aria-current="page" href="/AdminPanel" class="router-link-active router-link-exact-active navItem">Admin Panel</a><a href="/" class="navItem">Log Out <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon logOut" style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M5.615 20q-.69 0-1.152-.462Q4 19.075 4 18.385V5.615q0-.69.463-1.152Q4.925 4 5.615 4h6.404v1H5.615q-.23 0-.423.192Q5 5.385 5 5.615v12.77q0 .23.192.423q.193.192.423.192h6.404v1zm10.847-4.462l-.702-.719l2.319-2.319H9.192v-1h8.887l-2.32-2.32l.703-.718L20 12z"/></svg></span></a></ul></div></div></header><div class="container" data-v-b2382397><div class="flex" data-v-b2382397><div class="flexColoum" data-v-b2382397><div class="" data-v-b2382397><img src="/Admin.jpg" class="Ppic" alt="" data-v-b2382397></div><h2 class="name" data-v-b2382397>Administrator</h2><p class="email" data-v-b2382397>ehsanesmaily747@gmail.com</p></div><div class="grid" data-v-b2382397><div class="info" data-v-b2382397><div class="boxInfo" data-v-b2382397><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon infoIcons" data-v-b2382397 style="" width="20px" height="20px" viewBox="0 0 50 50" data-v-9c34c54e><path fill="currentColor" d="M25.1 42c-9.4 0-17-7.6-17-17s7.6-17 17-17s17 7.6 17 17s-7.7 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.8-15-15-15"/><path fill="currentColor" d="m15.3 37.3l-1.8-.8c.5-1.2 2.1-1.9 3.8-2.7c1.7-.8 3.8-1.7 3.8-2.8v-1.5c-.6-.5-1.6-1.6-1.8-3.2c-.5-.5-1.3-1.4-1.3-2.6c0-.7.3-1.3.5-1.7c-.2-.8-.4-2.3-.4-3.5c0-3.9 2.7-6.5 7-6.5c1.2 0 2.7.3 3.5 1.2c1.9.4 3.5 2.6 3.5 5.3c0 1.7-.3 3.1-.5 3.8c.2.3.4.8.4 1.4c0 1.3-.7 2.2-1.3 2.6c-.2 1.6-1.1 2.6-1.7 3.1V31c0 .9 1.8 1.6 3.4 2.2c1.9.7 3.9 1.5 4.6 3.1l-1.9.7c-.3-.8-1.9-1.4-3.4-1.9c-2.2-.8-4.7-1.7-4.7-4v-2.6l.5-.3s1.2-.8 1.2-2.4v-.7l.6-.3c.1 0 .6-.3.6-1.1c0-.2-.2-.5-.3-.6l-.4-.4l.2-.5s.5-1.6.5-3.6c0-1.9-1.1-3.3-2-3.3h-.6l-.3-.5c0-.4-.7-.8-1.9-.8c-3.1 0-5 1.7-5 4.5c0 1.3.5 3.5.5 3.5l.1.5l-.4.5c-.1 0-.3.3-.3.7c0 .5.6 1.1.9 1.3l.4.3v.5c0 1.5 1.3 2.3 1.3 2.4l.5.3v2.6c0 2.4-2.6 3.6-5 4.6c-1.1.4-2.6 1.1-2.8 1.6"/></svg><p data-v-b2382397>{
+  &quot;message&quot;: &quot;&quot;,
+  &quot;users&quot;: 26
+}</p></div><div class="boxInfo" data-v-b2382397><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon infoIcons" data-v-b2382397 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M5.115 20q-.69 0-1.152-.462q-.463-.463-.463-1.153V5.615q0-.69.463-1.152Q4.425 4 5.115 4h9.308v1H5.115q-.23 0-.423.192q-.192.193-.192.423v12.77q0 .23.192.423q.193.192.423.192h12.77q.23 0 .423-.192q.192-.193.192-.423V9.077h1v9.308q0 .69-.462 1.152q-.463.463-1.153.463zM8 16.5v-1h7v1zm0-3v-1h7v1zm0-3v-1h7v1zM17.5 8V6h-2V5h2V3h1v2h2v1h-2v2z"/></svg><p data-v-b2382397>{
+  &quot;message&quot;: &quot;&quot;,
+  &quot;posts&quot;: [
+    {
+      &quot;_id&quot;: &quot;655c9d4a0425b3d5adc0630f&quot;,
+      &quot;title&quot;: &quot;Art Movements Through History: A Journey of Expression&quot;,
+      &quot;subtitle&quot;: &quot;Artistic Paradigms and Their Evolution&quot;,
+      &quot;content&quot;: &quot;Art history is a tapestry woven with diverse movements. Explore the evolution from ancient to contemporary art styles, understanding the societal influences, techniques, and artists defining each era.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/4.jpg&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;6556081cc6fa1fc3a1c9d0ec&quot;,
+        &quot;username&quot;: &quot;lunarEclipse&quot;,
+        &quot;email&quot;: &quot;lunarEclipse@example.com&quot;,
+        &quot;password&quot;: &quot;lunarEclipse2210&quot;,
+        &quot;picture&quot;: &quot;https://i.pravatar.cc/150?u=lunarEclipse&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-11-16T12:16:28.685Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T12:16:28.685Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655613042321be4092d5d2f9&quot;,
+        &quot;name&quot;: &quot;Culture&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:06:34.622Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:06:34.622Z&quot;,
+      &quot;__v&quot;: 0
+    },
+    {
+      &quot;_id&quot;: &quot;655c9d4a0425b3d5adc06311&quot;,
+      &quot;title&quot;: &quot;Cultural Impact of Renaissance Art: Revival and Innovation&quot;,
+      &quot;subtitle&quot;: &quot;Revolutionizing Perspectives through Artistic Innovations&quot;,
+      &quot;content&quot;: &quot;The Renaissance era marked a profound cultural rebirth. Dive into the transformative impact of Renaissance art on philosophy, science, and society. Explore renowned artists and their contributions to this influential period.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/14.jpeg&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;6556081cc6fa1fc3a1c9d0de&quot;,
+        &quot;username&quot;: &quot;mysticRiver&quot;,
+        &quot;email&quot;: &quot;mysticRiver@example.com&quot;,
+        &quot;password&quot;: &quot;mysticRiver2210&quot;,
+        &quot;picture&quot;: &quot;https://i.pravatar.cc/150?u=mysticRiver&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-11-16T12:16:28.662Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T12:16:28.662Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655613042321be4092d5d2f9&quot;,
+        &quot;name&quot;: &quot;Culture&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:06:34.655Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:06:34.655Z&quot;,
+      &quot;__v&quot;: 0
+    },
+    {
+      &quot;_id&quot;: &quot;655c9d4a0425b3d5adc06313&quot;,
+      &quot;title&quot;: &quot;Traditional Crafts in a Modern World: Preserving Heritage&quot;,
+      &quot;subtitle&quot;: &quot;Heritage Crafts: Sustaining Artistic Legacies&quot;,
+      &quot;content&quot;: &quot;Traditional crafts embody cultural richness. Discover how artisans preserve traditional crafts amidst modernization, sustaining heritage and craftsmanship passed down through generations.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/15.jpg&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;6556081cc6fa1fc3a1c9d0e2&quot;,
+        &quot;username&quot;: &quot;cosmicNinja&quot;,
+        &quot;email&quot;: &quot;cosmicNinja@example.com&quot;,
+        &quot;password&quot;: &quot;cosmicNinja2210&quot;,
+        &quot;picture&quot;: &quot;https://i.pravatar.cc/150?u=cosmicNinja&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-11-16T12:16:28.671Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T12:16:28.671Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655613042321be4092d5d2f9&quot;,
+        &quot;name&quot;: &quot;Culture&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:06:34.658Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:06:34.658Z&quot;,
+      &quot;__v&quot;: 0
+    },
+    {
+      &quot;_id&quot;: &quot;655c9d4a0425b3d5adc06317&quot;,
+      &quot;title&quot;: &quot;The Influence of Literature on Societal Perceptions&quot;,
+      &quot;subtitle&quot;: &quot;Literary Works as Agents of Social Change&quot;,
+      &quot;content&quot;: &quot;Literature holds a mirror to society. Explore how literary works reflect and shape societal perceptions, addressing themes that provoke thought and catalyze change.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/17.jpg&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;6556081cc6fa1fc3a1c9d0f8&quot;,
+        &quot;username&quot;: &quot;celestialFlame&quot;,
+        &quot;email&quot;: &quot;celestialFlame@example.com&quot;,
+        &quot;password&quot;: &quot;celestialFlame2210&quot;,
+        &quot;picture&quot;: &quot;https://i.pravatar.cc/150?u=celestialFlame&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-11-16T12:16:28.699Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T12:16:28.699Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655613042321be4092d5d2f9&quot;,
+        &quot;name&quot;: &quot;Culture&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:06:34.662Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:06:34.662Z&quot;,
+      &quot;__v&quot;: 0
+    },
+    {
+      &quot;_id&quot;: &quot;655c9d4a0425b3d5adc06319&quot;,
+      &quot;title&quot;: &quot;Music as a Cultural Language: Bridging Communities&quot;,
+      &quot;subtitle&quot;: &quot;Harmonizing Cultures through Musical Expressions&quot;,
+      &quot;content&quot;: &quot;Music transcends boundaries and unites communities. Explore the role of music in cultural exchanges, understanding its ability to convey emotions and bridge diverse societies.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/6.webp&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;6556081cc6fa1fc3a1c9d0fc&quot;,
+        &quot;username&quot;: &quot;stealthRunner&quot;,
+        &quot;email&quot;: &quot;stealthRunner@example.com&quot;,
+        &quot;password&quot;: &quot;stealthRunner2210&quot;,
+        &quot;picture&quot;: &quot;https://i.pravatar.cc/150?u=stealthRunner&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-11-16T12:16:28.703Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T12:16:28.703Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655613042321be4092d5d2f9&quot;,
+        &quot;name&quot;: &quot;Culture&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:06:34.665Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:06:34.665Z&quot;,
+      &quot;__v&quot;: 0
+    },
+    {
+      &quot;_id&quot;: &quot;655c9d4a0425b3d5adc0631b&quot;,
+      &quot;title&quot;: &quot;Dance Forms Around the Globe: Rhythm of Diversity&quot;,
+      &quot;subtitle&quot;: &quot;Diversity in Movement: Stories of Tradition&quot;,
+      &quot;content&quot;: &quot;Dance is an expression of cultural identity. Explore different dance forms worldwide, understanding their significance, history, and stories embedded within diverse cultures.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/26.jpg?t=2023-11-17T13%3A16%3A51.513Z&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;6556081cc6fa1fc3a1c9d0f2&quot;,
+        &quot;username&quot;: &quot;midnightWhisper&quot;,
+        &quot;email&quot;: &quot;midnightWhisper@example.com&quot;,
+        &quot;password&quot;: &quot;midnightWhisper2210&quot;,
+        &quot;picture&quot;: &quot;https://i.pravatar.cc/150?u=midnightWhisper&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-11-16T12:16:28.692Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T12:16:28.692Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655613042321be4092d5d2f9&quot;,
+        &quot;name&quot;: &quot;Culture&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:06:34.667Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:06:34.667Z&quot;,
+      &quot;__v&quot;: 0
+    },
+    {
+      &quot;_id&quot;: &quot;655c9d4a0425b3d5adc0631d&quot;,
+      &quot;title&quot;: &quot;Cinematic Evolution: From Silent Films to Digital Age&quot;,
+      &quot;subtitle&quot;: &quot;Technological Advancements in Filmmaking&quot;,
+      &quot;content&quot;: &quot;Cinema has evolved as a cultural medium. Trace the journey of filmmaking from silent movies to the digital age, exploring technological advancements and societal influences.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/30.jpg&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;6556081cc6fa1fc3a1c9d0fa&quot;,
+        &quot;username&quot;: &quot;radiantSpirit&quot;,
+        &quot;email&quot;: &quot;radiantSpirit@example.com&quot;,
+        &quot;password&quot;: &quot;radiantSpirit2210&quot;,
+        &quot;picture&quot;: &quot;https://i.pravatar.cc/150?u=radiantSpirit&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-11-16T12:16:28.701Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T12:16:28.701Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655613042321be4092d5d2f9&quot;,
+        &quot;name&quot;: &quot;Culture&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:06:34.671Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:06:34.671Z&quot;,
+      &quot;__v&quot;: 0
+    },
+    {
+      &quot;_id&quot;: &quot;655c9d4a0425b3d5adc06321&quot;,
+      &quot;title&quot;: &quot;Festivals and Celebrations: Commemorating Tradition&quot;,
+      &quot;subtitle&quot;: &quot;Cultural Festivities: Roots and Celebrations&quot;,
+      &quot;content&quot;: &quot;Festivals celebrate cultural heritage. Explore diverse festivals, understanding their origins, rituals, and significance in commemorating traditions and fostering community spirit.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/22.jpg&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;651c6791d08b636d86017a8c&quot;,
+        &quot;username&quot;: &quot;nawid&quot;,
+        &quot;email&quot;: &quot;nawid123@gmail.com&quot;,
+        &quot;password&quot;: &quot;nawid123&quot;,
+        &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/1716911648273&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-10-03T19:12:17.319Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-10-08T14:07:29.721Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655613042321be4092d5d2f9&quot;,
+        &quot;name&quot;: &quot;Culture&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:03:00.180Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:06:34.678Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:06:34.678Z&quot;,
+      &quot;__v&quot;: 0
+    },
+    {
+      &quot;_id&quot;: &quot;655c9d950a3a6fc0835b9b95&quot;,
+      &quot;title&quot;: &quot;The Marvels of Quantum Mechanics: Exploring the Unseen&quot;,
+      &quot;subtitle&quot;: &quot;Challenges and Paradoxes in Quantum Phenomena&quot;,
+      &quot;content&quot;: &quot;Quantum mechanics reveals a surreal world at the atomic and subatomic levels. Delve into concepts like superposition, entanglement, and wave-particle duality. Explore the challenges in understanding and interpreting quantum phenomena that defy classical intuition.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/10.jpg&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;6556081cc6fa1fc3a1c9d0f4&quot;,
+        &quot;username&quot;: &quot;starryKnight&quot;,
+        &quot;email&quot;: &quot;starryKnight@example.com&quot;,
+        &quot;password&quot;: &quot;starryKnight2210&quot;,
+        &quot;picture&quot;: &quot;https://i.pravatar.cc/150?u=starryKnight&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-11-16T12:16:28.695Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T12:16:28.695Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655612f92321be4092d5d2f6&quot;,
+        &quot;name&quot;: &quot;Science&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:02:49.721Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:02:49.721Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:07:49.716Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:07:49.716Z&quot;,
+      &quot;__v&quot;: 0
+    },
+    {
+      &quot;_id&quot;: &quot;655c9d950a3a6fc0835b9b97&quot;,
+      &quot;title&quot;: &quot;Advancements in Neuroscience: Decoding the Brain&#39;s Mysteries&quot;,
+      &quot;subtitle&quot;: &quot;Uncovering Neuroplasticity and Cognitive Functions&quot;,
+      &quot;content&quot;: &quot;Neuroscience continues to unlock the complexities of the brain. Explore neuroplasticity, synaptic plasticity, and their roles in learning and memory. Understand ongoing research in decoding brain functions and its implications for treating neurological disorders.&quot;,
+      &quot;picture&quot;: &quot;https://uhqrkikymwnejdgghkus.supabase.co/storage/v1/object/public/Images/public/29.jpg&quot;,
+      &quot;author&quot;: {
+        &quot;_id&quot;: &quot;6556081cc6fa1fc3a1c9d0ea&quot;,
+        &quot;username&quot;: &quot;velvetShadow&quot;,
+        &quot;email&quot;: &quot;velvetShadow@example.com&quot;,
+        &quot;password&quot;: &quot;velvetShadow2210&quot;,
+        &quot;picture&quot;: &quot;https://i.pravatar.cc/150?u=velvetShadow&quot;,
+        &quot;isAdmin&quot;: false,
+        &quot;createdAt&quot;: &quot;2023-11-16T12:16:28.682Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T12:16:28.682Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;likes&quot;: [],
+      &quot;comments&quot;: [],
+      &quot;category&quot;: {
+        &quot;_id&quot;: &quot;655612f92321be4092d5d2f6&quot;,
+        &quot;name&quot;: &quot;Science&quot;,
+        &quot;createdAt&quot;: &quot;2023-11-16T13:02:49.721Z&quot;,
+        &quot;updatedAt&quot;: &quot;2023-11-16T13:02:49.721Z&quot;,
+        &quot;__v&quot;: 0
+      },
+      &quot;createdAt&quot;: &quot;2023-11-21T12:07:49.724Z&quot;,
+      &quot;updatedAt&quot;: &quot;2023-11-21T12:07:49.724Z&quot;,
+      &quot;__v&quot;: 0
+    }
+  ]
+}</p></div></div><div class="boxes" data-v-b2382397><div class="box" data-v-b2382397><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-b2382397 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M10 12q-1.65 0-2.825-1.175T6 8q0-1.65 1.175-2.825T10 4q1.65 0 2.825 1.175T14 8q0 1.65-1.175 2.825T10 12m-8 6v-.8q0-.825.425-1.55t1.175-1.1q1.275-.65 2.875-1.1T10 13h.35q.15 0 .3.05q-.2.45-.337.938T10.1 15H10q-1.775 0-3.187.45t-2.313.9q-.225.125-.363.35T4 17.2v.8h6.3q.15.525.4 1.038t.55.962H4q-.825 0-1.412-.587T2 18m13.85 2.2l-.15-.7q-.3-.125-.562-.262T14.6 18.9l-.725.225q-.325.1-.637-.025t-.488-.4l-.2-.35q-.175-.3-.125-.65t.325-.575l.55-.475q-.05-.35-.05-.65t.05-.65l-.55-.475q-.275-.225-.325-.563t.125-.637l.225-.375q.175-.275.475-.4t.625-.025l.725.225q.275-.2.538-.338t.562-.262l.15-.725q.075-.35.338-.562T16.8 11h.4q.35 0 .613.225t.337.575l.15.7q.3.125.562.275t.538.375l.675-.225q.35-.125.675 0t.5.425l.2.35q.175.3.125.65t-.325.575l-.55.475q.05.3.05.625t-.05.625l.55.475q.275.225.325.563t-.125.637l-.225.375q-.175.275-.475.4t-.625.025L19.4 18.9q-.275.2-.538.337t-.562.263l-.15.725q-.075.35-.337.563T17.2 21h-.4q-.35 0-.612-.225t-.338-.575M17 18q.825 0 1.413-.587T19 16q0-.825-.587-1.412T17 14q-.825 0-1.412.588T15 16q0 .825.588 1.413T17 18m-7-8q.825 0 1.413-.587T12 8q0-.825-.587-1.412T10 6q-.825 0-1.412.588T8 8q0 .825.588 1.413T10 10m.3 8"/></svg> Manage Users </div><div class="box" data-v-b2382397><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-b2382397 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 19q.825 0 1.413-.587T20 17q0-.825-.587-1.412T18 15q-.825 0-1.412.588T16 17q0 .825.588 1.413T18 19m-.2 3q-.35 0-.612-.225t-.338-.575l-.15-.7q-.3-.125-.562-.262T15.6 19.9l-.725.225q-.325.1-.637-.025t-.488-.4l-.2-.35q-.175-.3-.125-.65t.325-.575l.55-.475q-.05-.3-.05-.65t.05-.65l-.55-.475q-.275-.225-.325-.562t.125-.638l.225-.375q.175-.275.475-.4t.625-.025l.725.225q.275-.2.538-.337t.562-.263l.15-.725q.075-.35.337-.562T17.8 12h.4q.35 0 .613.225t.337.575l.15.7q.3.125.562.262t.538.338l.725-.225q.325-.1.638.025t.487.4l.2.35q.175.3.125.65t-.325.575l-.55.475q.05.3.05.65t-.05.65l.55.475q.275.225.325.563t-.125.637l-.225.375q-.175.275-.475.4t-.625.025L20.4 19.9q-.275.2-.537.337t-.563.263l-.15.725q-.075.35-.337.563T18.2 22zM4 18V6v4.3v-.3zm0 2q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h5.175q.4 0 .763.15t.637.425L12 6h8q.825 0 1.413.588T22 8v3.275q-.45-.325-.95-.562T20 10.3V8h-8.825l-2-2H4v12h7.075q.075.525.238 1.025T11.7 20z"/></svg> Manage Posts </div><div class="box" data-v-b2382397><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-b2382397 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M11 13v3q0 .425.288.713T12 17q.425 0 .713-.288T13 16v-3h3q.425 0 .713-.288T17 12q0-.425-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7q-.425 0-.712.288T11 8v3H8q-.425 0-.712.288T7 12q0 .425.288.713T8 13zm-6 8q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z"/></svg> Create Posts </div></div></div></div><div class="cats" data-v-b2382397><div class="catsContainer" data-v-b2382397><!--[--><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Health </button></div><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Sports</button></div><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Parenting</button></div><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Science</button></div><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Culture</button></div><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Finance</button></div><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Lifestyle</button></div><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Adventure</button></div><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Technology</button></div><div class="contain" data-v-b2382397 data-v-199ecbd6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon icon" data-v-199ecbd6 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg><button class="btn" style="margin:0.5rem;background:lightgray;" data-v-199ecbd6 data-v-ff3c6f77>Other</button></div><!--]--></div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="Icon add" data-v-b2382397 style="" width="20px" height="20px" viewBox="0 0 24 24" data-v-9c34c54e><path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z"/></svg><!----></div></div></div></div></div><script type="application/json" id="__NUXT_DATA__" data-ssr="true" data-src="/AdminPanel/_payload.json">[{"state":1,"_errors":24,"serverRendered":27,"path":28,"prerenderedAt":29},["Reactive",2],{"$sicons":3},{"material-symbols-light:logout":4,"ic:round-minus":9,"material-symbols:manage-accounts-outline-rounded":11,"material-symbols:folder-managed-outline-rounded":13,"material-symbols:add-box-outline-rounded":15,"material-symbols:add":17,"material-symbols-light:post-add":19,"ei:user":21},{"left":5,"top":5,"width":6,"height":6,"rotate":5,"vFlip":7,"hFlip":7,"body":8},0,24,false,"\u003Cpath fill=\"currentColor\" d=\"M5.615 20q-.69 0-1.152-.462Q4 19.075 4 18.385V5.615q0-.69.463-1.152Q4.925 4 5.615 4h6.404v1H5.615q-.23 0-.423.192Q5 5.385 5 5.615v12.77q0 .23.192.423q.193.192.423.192h6.404v1zm10.847-4.462l-.702-.719l2.319-2.319H9.192v-1h8.887l-2.32-2.32l.703-.718L20 12z\"/>",{"left":5,"top":5,"width":6,"height":6,"rotate":5,"vFlip":7,"hFlip":7,"body":10},"\u003Cpath fill=\"currentColor\" d=\"M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2\"/>",{"left":5,"top":5,"width":6,"height":6,"rotate":5,"vFlip":7,"hFlip":7,"body":12},"\u003Cpath fill=\"currentColor\" d=\"M10 12q-1.65 0-2.825-1.175T6 8q0-1.65 1.175-2.825T10 4q1.65 0 2.825 1.175T14 8q0 1.65-1.175 2.825T10 12m-8 6v-.8q0-.825.425-1.55t1.175-1.1q1.275-.65 2.875-1.1T10 13h.35q.15 0 .3.05q-.2.45-.337.938T10.1 15H10q-1.775 0-3.187.45t-2.313.9q-.225.125-.363.35T4 17.2v.8h6.3q.15.525.4 1.038t.55.962H4q-.825 0-1.412-.587T2 18m13.85 2.2l-.15-.7q-.3-.125-.562-.262T14.6 18.9l-.725.225q-.325.1-.637-.025t-.488-.4l-.2-.35q-.175-.3-.125-.65t.325-.575l.55-.475q-.05-.35-.05-.65t.05-.65l-.55-.475q-.275-.225-.325-.563t.125-.637l.225-.375q.175-.275.475-.4t.625-.025l.725.225q.275-.2.538-.338t.562-.262l.15-.725q.075-.35.338-.562T16.8 11h.4q.35 0 .613.225t.337.575l.15.7q.3.125.562.275t.538.375l.675-.225q.35-.125.675 0t.5.425l.2.35q.175.3.125.65t-.325.575l-.55.475q.05.3.05.625t-.05.625l.55.475q.275.225.325.563t-.125.637l-.225.375q-.175.275-.475.4t-.625.025L19.4 18.9q-.275.2-.538.337t-.562.263l-.15.725q-.075.35-.337.563T17.2 21h-.4q-.35 0-.612-.225t-.338-.575M17 18q.825 0 1.413-.587T19 16q0-.825-.587-1.412T17 14q-.825 0-1.412.588T15 16q0 .825.588 1.413T17 18m-7-8q.825 0 1.413-.587T12 8q0-.825-.587-1.412T10 6q-.825 0-1.412.588T8 8q0 .825.588 1.413T10 10m.3 8\"/>",{"left":5,"top":5,"width":6,"height":6,"rotate":5,"vFlip":7,"hFlip":7,"body":14},"\u003Cpath fill=\"currentColor\" d=\"M18 19q.825 0 1.413-.587T20 17q0-.825-.587-1.412T18 15q-.825 0-1.412.588T16 17q0 .825.588 1.413T18 19m-.2 3q-.35 0-.612-.225t-.338-.575l-.15-.7q-.3-.125-.562-.262T15.6 19.9l-.725.225q-.325.1-.637-.025t-.488-.4l-.2-.35q-.175-.3-.125-.65t.325-.575l.55-.475q-.05-.3-.05-.65t.05-.65l-.55-.475q-.275-.225-.325-.562t.125-.638l.225-.375q.175-.275.475-.4t.625-.025l.725.225q.275-.2.538-.337t.562-.263l.15-.725q.075-.35.337-.562T17.8 12h.4q.35 0 .613.225t.337.575l.15.7q.3.125.562.262t.538.338l.725-.225q.325-.1.638.025t.487.4l.2.35q.175.3.125.65t-.325.575l-.55.475q.05.3.05.65t-.05.65l.55.475q.275.225.325.563t-.125.637l-.225.375q-.175.275-.475.4t-.625.025L20.4 19.9q-.275.2-.537.337t-.563.263l-.15.725q-.075.35-.337.563T18.2 22zM4 18V6v4.3v-.3zm0 2q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h5.175q.4 0 .763.15t.637.425L12 6h8q.825 0 1.413.588T22 8v3.275q-.45-.325-.95-.562T20 10.3V8h-8.825l-2-2H4v12h7.075q.075.525.238 1.025T11.7 20z\"/>",{"left":5,"top":5,"width":6,"height":6,"rotate":5,"vFlip":7,"hFlip":7,"body":16},"\u003Cpath fill=\"currentColor\" d=\"M11 13v3q0 .425.288.713T12 17q.425 0 .713-.288T13 16v-3h3q.425 0 .713-.288T17 12q0-.425-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7q-.425 0-.712.288T11 8v3H8q-.425 0-.712.288T7 12q0 .425.288.713T8 13zm-6 8q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z\"/>",{"left":5,"top":5,"width":6,"height":6,"rotate":5,"vFlip":7,"hFlip":7,"body":18},"\u003Cpath fill=\"currentColor\" d=\"M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z\"/>",{"left":5,"top":5,"width":6,"height":6,"rotate":5,"vFlip":7,"hFlip":7,"body":20},"\u003Cpath fill=\"currentColor\" d=\"M5.115 20q-.69 0-1.152-.462q-.463-.463-.463-1.153V5.615q0-.69.463-1.152Q4.425 4 5.115 4h9.308v1H5.115q-.23 0-.423.192q-.192.193-.192.423v12.77q0 .23.192.423q.193.192.423.192h12.77q.23 0 .423-.192q.192-.193.192-.423V9.077h1v9.308q0 .69-.462 1.152q-.463.463-1.153.463zM8 16.5v-1h7v1zm0-3v-1h7v1zm0-3v-1h7v1zM17.5 8V6h-2V5h2V3h1v2h2v1h-2v2z\"/>",{"left":5,"top":5,"width":22,"height":22,"rotate":5,"vFlip":7,"hFlip":7,"body":23},50,"\u003Cpath fill=\"currentColor\" d=\"M25.1 42c-9.4 0-17-7.6-17-17s7.6-17 17-17s17 7.6 17 17s-7.7 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.8-15-15-15\"/>\u003Cpath fill=\"currentColor\" d=\"m15.3 37.3l-1.8-.8c.5-1.2 2.1-1.9 3.8-2.7c1.7-.8 3.8-1.7 3.8-2.8v-1.5c-.6-.5-1.6-1.6-1.8-3.2c-.5-.5-1.3-1.4-1.3-2.6c0-.7.3-1.3.5-1.7c-.2-.8-.4-2.3-.4-3.5c0-3.9 2.7-6.5 7-6.5c1.2 0 2.7.3 3.5 1.2c1.9.4 3.5 2.6 3.5 5.3c0 1.7-.3 3.1-.5 3.8c.2.3.4.8.4 1.4c0 1.3-.7 2.2-1.3 2.6c-.2 1.6-1.1 2.6-1.7 3.1V31c0 .9 1.8 1.6 3.4 2.2c1.9.7 3.9 1.5 4.6 3.1l-1.9.7c-.3-.8-1.9-1.4-3.4-1.9c-2.2-.8-4.7-1.7-4.7-4v-2.6l.5-.3s1.2-.8 1.2-2.4v-.7l.6-.3c.1 0 .6-.3.6-1.1c0-.2-.2-.5-.3-.6l-.4-.4l.2-.5s.5-1.6.5-3.6c0-1.9-1.1-3.3-2-3.3h-.6l-.3-.5c0-.4-.7-.8-1.9-.8c-3.1 0-5 1.7-5 4.5c0 1.3.5 3.5.5 3.5l.1.5l-.4.5c-.1 0-.3.3-.3.7c0 .5.6 1.1.9 1.3l.4.3v.5c0 1.5 1.3 2.3 1.3 2.4l.5.3v2.6c0 2.4-2.6 3.6-5 4.6c-1.1.4-2.6 1.1-2.8 1.6\"/>",["Reactive",25],{"mDV6iUD4A1":26,"SZE480uiFx":26,"2Q0m2qe1DZ":26},null,true,"/AdminPanel",1702816182766]</script>
+<script>window.__NUXT__={};window.__NUXT__.config={public:{supabase:{url:"https://uhqrkikymwnejdgghkus.supabase.co",key:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVocXJraWt5bXduZWpkZ2doa3VzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYyMjc4MDMsImV4cCI6MjAxMTgwMzgwM30.3h0fI8uFt5-1tlfn6wf6LTPXv3JX0n_zT2zCopWtr1g",redirect:false,redirectOptions:{login:"/login",callback:"/confirm",exclude:[]},cookieName:"sb",cookieOptions:{maxAge:28800,sameSite:"lax",secure:true},clientOptions:{auth:{flowType:"pkce",detectSessionInUrl:true,persistSession:true,autoRefreshToken:true}}}},app:{baseURL:"/",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body>
+</html>

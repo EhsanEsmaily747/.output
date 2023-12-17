@@ -1,0 +1,1 @@
+import{r as s}from"./entry.dac6c7c1.js";const u=()=>{let e=s(!1),l=s(!1),o=s(!1);function t(){e.value=!0,l.value=!1}function a(){l.value=!0,e.value=!1}return{loginopener:t,signupopener:a,showLogin:e,showSign:l,showEditModal:o}};export{u};

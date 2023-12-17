@@ -1,0 +1,1 @@
+import{_,k as e,c as s,d as n}from"./entry.dac6c7c1.js";const o={class:"btn"},c={__name:"CustomBtn",props:{text:String},setup(t){return(a,p)=>(e(),s("button",o,n(t.text),1))}},f=_(c,[["__scopeId","data-v-ff3c6f77"]]);export{f as _};

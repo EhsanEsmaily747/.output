@@ -1,0 +1,1 @@
+const c=()=>{function e(t){const o=t.trim().split("=")[0].split(".")[1].replace(/-/g,"+").replace(/_/g,"/"),a=atob(o);return JSON.parse(a)}function n(){return localStorage.getItem("token")}return{decode:e,getToken:n}};export{c as u};
